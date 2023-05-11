@@ -12,11 +12,13 @@ import {ToastrModule} from "ngx-toastr";
 import {NgxSpinnerModule} from "ngx-spinner";
 import {LoadingInterceptors} from "./core/interceptors/loading.interceptors";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+// import { CreateComponent } from './admin/crud-product/create/create.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    // CreateComponent,
 
   ],
   imports: [

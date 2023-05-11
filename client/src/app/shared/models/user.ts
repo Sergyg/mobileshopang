@@ -1,7 +1,14 @@
-export interface IUser {
+import { Role } from './role';
+import {BaseModel} from "./base";
+
+export interface IUser extends BaseModel <IUser>{
+  title?: string;
+  firstName?: string;
+  lastName?: string;
   email: string;
   displayName: string;
   token: string;
+  role?: Role;
 }
 export interface Address {
   firstName: string;
@@ -11,3 +18,12 @@ export interface Address {
   state: string;
   zipcode: string;
 }
+
+
+
+
+
+
+
+
+

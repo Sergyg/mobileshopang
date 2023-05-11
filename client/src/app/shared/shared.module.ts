@@ -16,7 +16,7 @@ import {BsDropdownModule} from "ngx-bootstrap/dropdown";
     PagingHeaderComponent,
     PagerComponent,
     OrderTotalsComponent,
-    BasketSummaryComponent
+    BasketSummaryComponent,
   ],
   imports: [
     CommonModule,

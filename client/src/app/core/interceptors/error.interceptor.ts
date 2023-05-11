@@ -10,6 +10,7 @@ import {Navigation, NavigationExtras, Router} from "@angular/router";
 import {error} from "@angular/compiler-cli/src/transformers/util";
 import {ToastrService} from "ngx-toastr";
 
+
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
 

@@ -15,24 +15,32 @@
 
 
     <h5 class="text-warning ml-3">Brands</h5>
-    <ul class="list-group ml-3">
-      <li class="list-group-item"
-          *ngFor="let brand of brands"
-          [class.active]="brand.id === this.shopParams.brandId"
-          [value]="brand.id"
-          (click)="onBrandSelected(brand.id)"
-        >
-        {{brand.name}}
-      </li>
-    </ul>
+      <mat-form-field>
+          <mat-label>Brands</mat-label>
+          <mat-select  #select multiple>
+            <div class="select-all">
+              <mat-checkbox [(ngModel)]="allSelected"
+                            [ngModelOptions]="{standalone: true}"
+                            (change)="setAll($event.checked)">Select All
+              </mat-checkbox>
+            </div>
+            <mat-option (click)="onBrandSelected()"
+                        *ngFor="let brand  of brands | slice:1"
+                        [value]="brand.productBrandId">
+              {{brand.name}}
+            </mat-option>
+          </mat-select>
+
+        </mat-form-field>
+
 
     <h5 class="text-warning ml-3">Types</h5>
       <ul class="list-group my-3">
         <li class="list-group-item active"
             *ngFor="let type of types"
-            [class.active]="type.id === this.shopParams.typeId"
-            [value]="type.id"
-            (click)="onTypeSelected(type.id)"
+            [class.active]="type.productTypeId === this.shopParams.typeId"
+            [value]="type.productTypeId"
+            (click)="onTypeSelected(type.productTypeId)"
         >
        {{type.name}}
         </li>

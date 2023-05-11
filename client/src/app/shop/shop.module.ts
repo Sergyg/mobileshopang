@@ -4,8 +4,11 @@ import { ShopComponent } from './shop.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import {SharedModule} from "../shared/shared.module";
 import { ProductDetailsComponent } from './product-details/product-details.component';
-import {RouterLink} from "@angular/router";
 import {ShopRoutingModule} from "./shop-routing.module";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatSelectModule} from "@angular/material/select";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -18,7 +21,11 @@ import {ShopRoutingModule} from "./shop-routing.module";
   imports: [
     CommonModule,
     SharedModule,
-   ShopRoutingModule
+    ShopRoutingModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatCheckboxModule,
+    FormsModule
   ],
   exports: [ShopComponent]
 })

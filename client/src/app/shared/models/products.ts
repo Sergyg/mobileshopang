@@ -1,10 +1,19 @@
-export interface IProduct
+import {BaseModel} from "./base";
+
+export class IProduct extends BaseModel<IProduct>
 {
-  "id": number,
-  "name": "string",
-  "description": "string",
-  "price": number,
-  "pictureUrl": "string",
-  "productType": "string",
+  "name": "string"
+  "description": "string"
+  "price": number
+  "pictureUrl": "string"
+  "productType": "string"
   "productBrand": "string"
+  "quantityInStock": number
+
+  constructor(model?: Partial<IProduct>)
+  {
+  super(model);
+  }
 }
+
+
